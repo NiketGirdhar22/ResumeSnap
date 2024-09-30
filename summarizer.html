@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Summarizer - ResumeSnap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_summarizer.css">
+</head>
+<body>
+    <header>
+        <h1>ResumeSnap</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="summarizer.html">Resume Summariser</a></li>
+                <li><a href="generator.html" class="disabled">Resume Generator</a></li>
+                <li><a href="editor.html" class="disabled">Resume Image Generator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="upload-container">
+                <h2>Upload Your Resume PDF</h2>
+                <form id="upload-form">
+                    <input type="file" id="file-input" name="file" accept="application/pdf">
+                    <label for="file-input">Choose PDF</label>
+                    <p class="uploaded-file" id="uploaded-file"></p>
+                    <input type="text" id="job-role" name="job-role" placeholder="e.g., Software Engineer">
+                    <button type="submit" id="upload-button" disabled>Upload</button>
+                </form>
+            </div>
+        </section>
+        <div id="processing-overlay" class="processing-overlay">
+            <div class="spinner"></div>
+            <div class="loading-text">Processing...</div>
+        </div>        
+        <div class="summary-container" id="summary-container">
+            <h2>Resume Summary</h2>
+            <div class="summary-content-wrapper">
+                <p id="summary-content"></p>
+                <div class="circular-progress-container">
+                    <div class="circular-progress" id="circular-progress">
+                        <span class="progress-value" id="progress-value">0</span>
+                    </div>
+                </div>
+            </div>
+            <button id="review-button" style="display: none;">Leave a Review</button>
+        </div>
+        
+        <div class="review-container" id="review-container" style="display: none;">
+            <h2>Submit Your Review</h2>
+            <form id="review-form">
+                <input type="text" id="reviewer-name" name="reviewer-name" placeholder="Your Name">
+                <input type="email" id="reviewer-email" name="reviewer-email" placeholder="Your Email">
+                <textarea id="review-text" name="review-text" rows="4" placeholder="Enter your review here..."></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="summarizer.js"></script>
+</body>
+</html>

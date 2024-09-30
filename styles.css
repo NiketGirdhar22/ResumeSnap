@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service {
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+    padding: 20px;
+    width: 30%;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    margin: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.service:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(76, 175, 80, 0.8);
+    z-index: 2;
+}
+
+h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.about-detail {
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    height: auto;
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-detail h3, .about-detail p {
+    margin: 0 0 10px 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
